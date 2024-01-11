@@ -1,6 +1,8 @@
 package com.autocat.playground.feign_with_decoder.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Builder;
@@ -17,6 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class CharacterHyperStat {
     /**
      * 조회 기준일
@@ -26,55 +29,46 @@ public class CharacterHyperStat {
     /**
      * 캐릭터 직업
      */
-    @JsonProperty("character_class")
     private String characterClass;
 
     /**
      * 적용중인 프리셋 번호
      */
-    @JsonProperty("use_preset_no")
     private String usePresetNo;
 
     /**
      * 사용 가능한 최대 하이퍼스텟 포인트
      */
-    @JsonProperty("use_available_hyper_stat")
     private Long useAvailableHyperStat;
 
     /**
      * 프리셋 1번 하이퍼 스텟 잔여 포인트
      */
-    @JsonProperty("hyper_stat_preset_1_remain_point")
     private Long hyperStatPreset1RemainPoint;
 
     /**
      * 프리셋 1번 하이퍼 스텟 정보
      */
-    @JsonProperty("hyper_stat_preset_1")
     private List<HyperStatPreset> hyperStatPreset1;
 
     /**
      * 프리셋 2번 하이퍼 스텟 잔여 포인트
      */
-    @JsonProperty("hyper_stat_preset_2_remain_point")
     private Long hyperStatPreset2RemainPoint;
 
     /**
      * 프리셋 2번 하이퍼 스텟 정보
      */
-    @JsonProperty("hyper_stat_preset_2")
     private List<HyperStatPreset> hyperStatPreset2;
 
     /**
      * 프리셋 3번 하이퍼 스텟 잔여 포인트
      */
-    @JsonProperty("hyper_stat_preset_3_remain_point")
     private Long hyperStatPreset3RemainPoint;
 
     /**
      * 프리셋 3번 하이퍼 스텟 정보
      */
-    @JsonProperty("hyper_stat_preset_3")
     private List<HyperStatPreset> hyperStatPreset3;
 
 }
