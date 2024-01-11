@@ -2,8 +2,6 @@ package com.autocat.playground.feign_with_decoder.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.PropertyNamingStrategies;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Builder;
@@ -19,11 +17,15 @@ import lombok.NoArgsConstructor;
 @Builder
 public class HyperStatPreset {
 
+    @JsonProperty("stat_type")
     private String statType;
 
+    @JsonProperty("stat_name")
     private Long statPoint;
 
+    @JsonProperty("stat_level")
     private Long statLevel;
 
+    @JsonProperty("stat_increase")
     private String statIncrease;
 }
