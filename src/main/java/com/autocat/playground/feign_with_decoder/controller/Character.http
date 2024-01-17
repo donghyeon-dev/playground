@@ -1,0 +1,2 @@
+### Get Character Hyper Stat
+GET localhost:8080/character/hyper-stat
