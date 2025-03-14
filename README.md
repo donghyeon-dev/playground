@@ -1,2 +1,1 @@
-## 개요
-`Feign`은 HTTP 요청을 생성하는 과정을 단순화하는 **선언적 웹 서비스 클라이언트**입니다. 개인적으로 선호하는 클라이언트이다보니 SpringCloud의 의존성을 추가하는 번거로움을 감수하고라도 사용하고 있습니다. 하지만 종종 Response 의 field가 애플리케이션에서 예상하는 케이스와 일치하지 않는 상황을 마주칠 수 있습니다. 이를 처리하기 위해 과정을 기록하였습니다.
+Playground cotains Feign with Custom Decoder, Java8 lambda, etc...
